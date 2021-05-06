@@ -1,0 +1,23 @@
+.results {
+    font-size: 1.2rem;
+    background: #f4f4f4;
+    padding: .7rem;
+}
+
+/* .table-wrapper {
+    height: 50px;
+    overflow: scroll;
+} */
+/* td { 
+    border: 1px solid #333 !important;
+} */
+
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 600px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }

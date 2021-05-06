@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Amortization Calculator</title>
+</head>
+
+<body>
+    <h1 class="text-center text-primary pt-4">Amortization Schedule Calculator</h1>
+
+    <div class="container">
+        <div class="row text-center mt-4">
+            <!-- Loan Form -->
+            <div class="col-6">
+                <form id="form-task" name="form_task">
+                    <div class="input-group mb-3">
+                        <input type="number" id="loanAmount" class="form-control" placeholder="$"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2" name="loanAmount"
+                            required>
+                        <div class="input-group-append">
+                            <span class="input-group-text">Loan amount</span>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="number" id="months" class="form-control" placeholder="months" name="months"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                        <div class="input-group-append">
+                            <span class="input-group-text">Number of months</span>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="number" id="interest" class="form-control" name="interest" placeholder="%"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                        <div class="input-group-append">
+                            <span class="input-group-text">Annual interest</span>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="number" id="extra" class="form-control" name="extra" placeholder="$"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <span class="input-group-text">Extra monthly payments</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary mr-5">Calculate</button>
+                        <button type="button" class="btn btn-primary ml-5" onclick="startOver()">Start Over</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Loan Info -->
+            <div class="col-6 results">
+                <p>Loan amount : <span></span></p>
+                <p>Number of months : <span></span></p>
+                <p>Interest rate : <span></span></p>
+                <p>+Extra : <span></span></p>
+                <p>Monthly payment : <span></span></p>
+                <p>Total payment : <span></span></p>
+            </div>
+        </div>
+        <!-- Amortization Table -->
+        <div class="table-wrapper-scroll-y my-custom-scrollbar mt-5">
+            <table class="table table-bordered table-hover" id="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Payment</th>
+                        <th scope="col">Principle</th>
+                        <th scope="col">Interest</th>
+                        <th scope="col">Interest Paid</th>
+                        <th scope="col">Balance</th>
+                    </tr>
+                </thead>
+                <tbody id="schedule">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
